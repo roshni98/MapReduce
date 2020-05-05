@@ -1,6 +1,3 @@
-Roshni Shah
-Distributed Project 3
-netid: rys17
 
 
 How to run the project:
@@ -15,5 +12,5 @@ For small file counts:
 For large file counts:
 ./largeRedditFileMapReduce
 
-For this project I implemented what I learned from the last project about Hadoop to use HDFS to run MapReduce. I learned that we can take a large text file and apply operations to Map it into a key,value data structure and then reduce or group by the key and sum the values in order to get the final result. For Project 3, I used a StringTokenizer and read each file line by line, splitting each line with tab. Then in the map operation took the second token (#image_id) as the key and for tokens 3-5 I summed up the upvotes, downvotes, and comments by using Integer.parseInt to calculate the Impact score. Finally in the reduce operation I just summed up all the impact scores for each key. One of the challenges I ran into was working with the iterator. I intially made the mistake of forgetting to move the iterator forward for tokens I was not interested in like unixtime and title. After fixing this, I was able to easily get the results. 
+I used a StringTokenizer and read each file line by line, splitting each line with tab. Then in the map operation took the second token (#image_id) as the key and for tokens 3-5 I summed up the upvotes, downvotes, and comments by using Integer.parseInt to calculate the Impact score. Finally in the reduce operation I just summed up all the impact scores for each key. One of the challenges I ran into was working with the iterator. I intially made the mistake of forgetting to move the iterator forward for tokens I was not interested in like unixtime and title. After fixing this, I was able to easily get the results. 
 
